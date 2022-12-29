@@ -22,11 +22,11 @@ local Farm = Window:NewTab("Auto Farm")
 local FarmSection = Farm:NewSection("Auto Farm")
  
  
-FarmSection:NewButton("Infinite Wins (+35 Wins / 12 Seconds)", "+35 Wins every 12 Seconds (rejoin to stop)", function()
+FarmSection:NewButton("Infinite Wins (+50 Wins / 9 Seconds)", "+50 Wins every 9 Seconds (rejoin to stop)", function()
     while true do
-        local x = 12314.6494140625
-        local y = 45656.24609375
-        local z = 213.0494842529297
+        local x = 14361.927734375 
+        local y = 64007.46484375
+        local z = 236.80113220214844
         game.Players.LocalPlayer.Character:MoveTo(Vector3.new(x, y, z))
             wait(9)
         end
