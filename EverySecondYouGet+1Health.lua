@@ -57,9 +57,9 @@ Tab:AddButton({
 	Callback = function()
       		EnabledNotification()
                 while true do
-                    local x = 984.4512329101562
-                    local y = 0.20754379034042358
-                    local z = 329.2272644042969
+                    local x = 982.7626342773438
+                    local y = 0.10001152753829956
+                    local z = -439.0843200683594
                     game.Players.LocalPlayer.Character:MoveTo(Vector3.new(x, y, z))
                         wait(9)
                     end
