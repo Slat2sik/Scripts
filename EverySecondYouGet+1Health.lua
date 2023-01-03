@@ -1,4 +1,4 @@
--- if game.PlaceId == 11302865934 then
+if game.PlaceId == 11302865934 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Player = game.Players.LocalPlayer
 local Window = OrionLib:MakeWindow({Name = "Made By J.#5424", HidePremium = false, SaveConfig = true, IntroEnabled = false})
@@ -138,3 +138,11 @@ Tab:AddButton({
         OrionLib:Destroy()
   	end    
 })
+
+
+
+
+
+
+end
+OrionLib:Init()
