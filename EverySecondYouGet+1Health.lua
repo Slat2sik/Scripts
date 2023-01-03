@@ -1,3 +1,4 @@
+-- if game.PlaceId == 11302865934 then
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
 local Player = game.Players.LocalPlayer
 local Window = OrionLib:MakeWindow({Name = "Made By J.#5424", HidePremium = false, SaveConfig = true, IntroEnabled = false})
@@ -14,22 +15,22 @@ OrionLib:MakeNotification({
 
 -- Functions
 
-function EnabledNotification()
-    OrionLib:MakeNotification({
-        Name = "Enabled!",
-        Content = "Auto farm has been enabled",
-        Image = "rbxassetid://4483345998",
-        Time = 5
-    })
+function autoWins()
+    while _G.autoWins == true do
+            local x = 982.7626342773438
+            local y = 0.10001152753829956
+            local z = -439.0843200683594
+            game.Players.LocalPlayer.Character:MoveTo(Vector3.new(x, y, z))
+                wait(9)
+                wait('.0000000000000000000000000000000000000000000000000000000000000000001')
+            end
 end
 
-function RejoinNotification()
-    OrionLib:MakeNotification({
-        Name = "Rejoining",
-        Content = "Rejoining the same server",
-        Image = "rbxassetid://4483345998",
-        Time = 5
-    })
+function autoRebirth()
+    while _G.autoRebirth == true do
+    game:GetService("ReplicatedStorage").RebirthEvent:FireServer()
+    wait('.0000000000000000000000000000000000000000000000000000000000000000001')
+    end
 end
 
 function DiscordServerNotification()
@@ -52,37 +53,65 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
-Tab:AddButton({
-	Name = "Auto Farm Wins (click the rejoin button to stop)",
-	Callback = function()
-      		EnabledNotification()
-                while true do
-                    local x = 982.7626342773438
-                    local y = 0.10001152753829956
-                    local z = -439.0843200683594
-                    game.Players.LocalPlayer.Character:MoveTo(Vector3.new(x, y, z))
-                        wait(9)
-                    end
+local Section = Tab:AddSection({
+	Name = "Auto Farm"
+})
+
+Tab:AddToggle({
+	Name = "Auto Wins",
+	Default = false,
+	Callback = function(Value)
+            _G.autoWins = Value
+
+            autoWins()
   	end    
 })
 
-Tab:AddButton({
-	Name = "Rejoin",
-	Callback = function()
-        RejoinNotification()
-        wait(2)
-        local ts = game:GetService("TeleportService")
+Tab:AddToggle({
+	Name = "Auto Rebirth",
+	Default = false,
+	Callback = function(Value)
+		_G.autoRebirth = Value
 
-        local p = game:GetService("Players").LocalPlayer
-        
-         
-        
-        ts:Teleport(game.PlaceId, p)
-  	end    
+        autoRebirth()
+	end    
 })
 
 local Tab = Window:MakeTab({
-	Name = "Credits",
+	Name = "Updates",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddDropdown({
+	Name = "v1.0",
+	-- Default = "1",
+	Options = {"Switched 5+ wins to 12+ wins"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+Tab:AddDropdown({
+	Name = "v1.1",
+	-- Default = "1",
+	Options = {"Switched 12+ wins to 8+ wins"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+Tab:AddDropdown({
+	Name = "v1.2",
+	-- Default = "1",
+	Options = {"Updated the auto farm section"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Discord",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
@@ -94,5 +123,18 @@ Tab:AddButton({
 
               setclipboard("https://discord.gg/BUA8XuPWGX")
               toclipboard("https://discord.gg/BUA8XuPWGX")
+  	end    
+})
+
+local Tab = Window:MakeTab({
+	Name = "Gui Options",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Destory GUI",
+	Callback = function()
+        OrionLib:Destroy()
   	end    
 })
