@@ -17,9 +17,9 @@ OrionLib:MakeNotification({
 
 function autoWins()
     while _G.autoWins == true do
-            local x = 982.7626342773438
-            local y = 0.10001152753829956
-            local z = -439.0843200683594
+		local x = 2089.228271484375
+		local y = 205.49998474121094
+		local z = 145.49891662597656
             game.Players.LocalPlayer.Character:MoveTo(Vector3.new(x, y, z))
                 wait(9)
                 wait('.0000000000000000000000000000000000000000000000000000000000000000001')
@@ -105,6 +105,15 @@ Tab:AddDropdown({
 	Name = "v1.2",
 	-- Default = "1",
 	Options = {"Updated the auto farm section"},
+	Callback = function(Value)
+		print(Value)
+	end    
+})
+
+Tab:AddDropdown({
+	Name = "v1.3",
+	-- Default = "1",
+	Options = {"Switched +8 wins to +11 (couldnt get the 12+ wins because its glitched)"},
 	Callback = function(Value)
 		print(Value)
 	end    
