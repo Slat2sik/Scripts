@@ -12,6 +12,12 @@ OrionLib:MakeNotification({
 	Time = 7
 })
 
+-- Values
+_G.autoWins = true
+_G.autoRebirth = true
+_G.autoHatch = true
+_G.selectEgg = "Noob"
+
 
 -- Functions
 
@@ -33,6 +39,13 @@ function autoRebirth()
     end
 end
 
+function autoHatch()
+	while _G.autoHatch == true do
+	game:GetService("ReplicatedStorage").RemoteEvents.EggOpened:InvokeServer(_G.selectEgg,"Single")
+	wait('.0000000000000000000000000000000000000000000000000000000000000000001')
+	end
+end
+
 function DiscordServerNotification()
     OrionLib:MakeNotification({
         Name = "Copied!",
@@ -51,10 +64,6 @@ local Tab = Window:MakeTab({
 	Name = "Auto Farm",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
-})
-
-local Section = Tab:AddSection({
-	Name = "Auto Farm"
 })
 
 Tab:AddToggle({
@@ -78,6 +87,33 @@ Tab:AddToggle({
 })
 
 local Tab = Window:MakeTab({
+	Name = "Eggs",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddParagraph("NOTE","To collect the eggs you must be standing inside the egg box")
+
+Tab:AddToggle({
+	Name = "Auto Hatch",
+	Default = false,
+	Callback = function(Value)
+		_G.autoHatch = Value
+		autoHatch()
+	end    
+})
+
+Tab:AddDropdown({
+	Name = "Select Egg",
+	Default = "Noob",
+	Options = {"Noob", "Starter", "Rare", "Pro", "Epic", "Legendary", "Mythical", "Godly", "Dark", "Void", "Desert"},
+	Callback = function(Value)
+		_G.selectEgg = Value
+		print(_G.selectEgg)
+	end    
+})
+
+local Tab = Window:MakeTab({
 	Name = "Updates",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
@@ -85,7 +121,7 @@ local Tab = Window:MakeTab({
 
 Tab:AddDropdown({
 	Name = "v1.0",
-	-- Default = "1",
+	Default = "Click to read update",
 	Options = {"Switched 5+ wins to 12+ wins"},
 	Callback = function(Value)
 		print(Value)
@@ -94,7 +130,7 @@ Tab:AddDropdown({
 
 Tab:AddDropdown({
 	Name = "v1.1",
-	-- Default = "1",
+	Default = "Click to read update",
 	Options = {"Switched 12+ wins to 8+ wins"},
 	Callback = function(Value)
 		print(Value)
@@ -103,7 +139,7 @@ Tab:AddDropdown({
 
 Tab:AddDropdown({
 	Name = "v1.2",
-	-- Default = "1",
+	Default = "Click to read update",
 	Options = {"Updated the auto farm section"},
 	Callback = function(Value)
 		print(Value)
@@ -112,28 +148,37 @@ Tab:AddDropdown({
 
 Tab:AddDropdown({
 	Name = "v1.3",
-	-- Default = "1",
+	Default = "Click to read update",
 	Options = {"Switched +8 wins to +11 (couldnt get the 12+ wins because its glitched)"},
 	Callback = function(Value)
 		print(Value)
 	end    
 })
 
-local Tab = Window:MakeTab({
-	Name = "Discord",
-	Icon = "rbxassetid://4483345998",
-	PremiumOnly = false
+Tab:AddDropdown({
+	Name = "v1.4",
+	Default = "Click to read update",
+	Options = {"Added a auto hatch section"},
+	Callback = function(Value)
+		print(Value)
+	end    
 })
 
-Tab:AddButton({
-	Name = "Join discord server",
-	Callback = function()
-      		DiscordServerNotification()
+-- local Tab = Window:MakeTab({
+-- 	Name = "Discord",
+-- 	Icon = "rbxassetid://4483345998",
+-- 	PremiumOnly = false
+-- })
 
-              setclipboard("https://discord.gg/BUA8XuPWGX")
-              toclipboard("https://discord.gg/BUA8XuPWGX")
-  	end    
-})
+-- Tab:AddButton({
+-- 	Name = "Join discord server",
+-- 	Callback = function()
+--       		DiscordServerNotification()
+
+--               setclipboard("https://discord.gg/BUA8XuPWGX")
+--               toclipboard("https://discord.gg/BUA8XuPWGX")
+--   	end    
+-- })
 
 local Tab = Window:MakeTab({
 	Name = "Gui Options",
