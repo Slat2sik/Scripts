@@ -114,55 +114,58 @@ Tab:AddDropdown({
 })
 
 local Tab = Window:MakeTab({
+	Name = "Teleport",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:AddButton({
+	Name = "Earth",
+	Callback = function()
+			local x = 0.026580367237329483
+			local y = 0.19999952614307404
+			local z = -0.0014024863485246897
+			game.Players.LocalPlayer.Character:MoveTo(Vector3.new(x, y, z))
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Moon",
+	Callback = function()
+			local x = 1023.6930541992188
+			local y = 0.19999976456165314
+			local z = 3.8516876697540283
+			game.Players.LocalPlayer.Character:MoveTo(Vector3.new(x, y, z))
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Lava",
+	Callback = function()
+			local x = 2047.70068359375
+			local y = 0.19999976456165314
+			local z = 3.853139638900757
+			game.Players.LocalPlayer.Character:MoveTo(Vector3.new(x, y, z))
+  	end    
+})
+
+local Tab = Window:MakeTab({
 	Name = "Updates",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-Tab:AddDropdown({
-	Name = "v1.0",
-	Default = "Click to read update",
-	Options = {"Switched 5+ wins to 12+ wins"},
-	Callback = function(Value)
-		print(Value)
-	end    
-})
+Tab:AddParagraph("v1.0","Switched +5 wins to +12 wins")
 
-Tab:AddDropdown({
-	Name = "v1.1",
-	Default = "Click to read update",
-	Options = {"Switched 12+ wins to 8+ wins"},
-	Callback = function(Value)
-		print(Value)
-	end    
-})
+Tab:AddParagraph("v1.1","Switched +12 wins to +8 wins")
 
-Tab:AddDropdown({
-	Name = "v1.2",
-	Default = "Click to read update",
-	Options = {"Updated the auto farm section"},
-	Callback = function(Value)
-		print(Value)
-	end    
-})
+Tab:AddParagraph("v1.2","Updated the auto farm section")
 
-Tab:AddDropdown({
-	Name = "v1.3",
-	Default = "Click to read update",
-	Options = {"Switched +8 wins to +11 (couldnt get the 12+ wins because its glitched)"},
-	Callback = function(Value)
-		print(Value)
-	end    
-})
+Tab:AddParagraph("v1.3","Switched +8 wins to +11 (couldn't get the +12 because the drop is glitched")
 
-Tab:AddDropdown({
-	Name = "v1.4",
-	Default = "Click to read update",
-	Options = {"Added a auto hatch section"},
-	Callback = function(Value)
-		print(Value)
-	end    
-})
+Tab:AddParagraph("v1.4","Added a auto hatch section")
+
+Tab:AddParagraph("v1.5","Added a teleport section")
 
 -- local Tab = Window:MakeTab({
 -- 	Name = "Discord",
