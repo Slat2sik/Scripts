@@ -1,8 +1,8 @@
 if game.PlaceId == 11063612131 then
 	local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 	local Window = Rayfield:CreateWindow({
-	   Name = "Every Second You Get +1 Health",
-	   LoadingTitle = "Every Second You Get +1 Health",
+	   Name = "Every Second You Get +1 Jump Power",
+	   LoadingTitle = "Every Second You Get +1 Jump Power",
 	   LoadingSubtitle = "by J.#5424",
 	--    ConfigurationSaving = {
 	--       Enabled = false,
