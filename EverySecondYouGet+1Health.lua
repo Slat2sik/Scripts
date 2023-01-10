@@ -17,13 +17,12 @@ if game.PlaceId == 11302865934 then
 	   KeySystem = true, -- Set this to true to use our key system
 	   KeySettings = {
 		  Title = "Key System",
-		  Subtitle = "By J.#5424",
-		  Note = "F9 to get the key",
+		  Subtitle = "J.#5424",
+		  Note = "https://pastebin.com/raw/DDib0F3d",
 		  FileName = "JKey",
 		  SaveKey = false,
 		  GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
 		  Key = "RgUkXp2s",
-		  print("Key: RgUkXp2s")
 	   }
 	})
 	
@@ -101,6 +100,8 @@ if game.PlaceId == 11302865934 then
 	-- Eggs
 	
 	local Tab = Window:CreateTab("Eggs", 4483362458) -- Title, Image
+
+	local Paragraph = Tab:CreateParagraph({Title = "NOTE", Content = "You must be standing inside the egg box"})
 	
 	local Toggle = Tab:CreateToggle({
 	   Name = "Auto Hatch",
