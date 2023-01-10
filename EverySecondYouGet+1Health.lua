@@ -1,8 +1,8 @@
 if game.PlaceId == 11302865934 then
 	local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 	local Window = Rayfield:CreateWindow({
-	   Name = "+1 Health",
-	   LoadingTitle = "Made By J.#5424",
+	   Name = "Every Second You Get +1 Health",
+	   LoadingTitle = "Every Second You Get +1 Health",
 	   LoadingSubtitle = "by J.#5424",
 	--    ConfigurationSaving = {
 	--       Enabled = false,
@@ -12,7 +12,7 @@ if game.PlaceId == 11302865934 then
 	   Discord = {
 		  Enabled = true,
 		  Invite = "https://discord.gg/BUA8XuPWGX", -- The Discord invite code, do not include discord.gg/
-		  RememberJoins = false -- Set this to false to make them join the discord every time they load it up
+		  RememberJoins = true -- Set this to false to make them join the discord every time they load it up
 	   },
 	   KeySystem = true, -- Set this to true to use our key system
 	   KeySettings = {
@@ -22,8 +22,8 @@ if game.PlaceId == 11302865934 then
 		  FileName = "JKey",
 		  SaveKey = false,
 		  GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-		  Key = "JScripts",
-		--   print("Key: JScripts")
+		  Key = "RgUkXp2s",
+		  print("Key: RgUkXp2s")
 	   }
 	})
 	
