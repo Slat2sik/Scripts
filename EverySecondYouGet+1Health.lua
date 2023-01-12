@@ -1,3 +1,9 @@
+--[[
+Created by J.
+Contact me:
+Discord: J.#5424
+]]
+
 if game.PlaceId == 11302865934 then
 	local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 	local Window = Rayfield:CreateWindow({
