@@ -17,7 +17,7 @@ if game.PlaceId == 11302865934 then
 	--    },
 	   Discord = {
 		  Enabled = true,
-		  Invite = "https://discord.gg/BUA8XuPWGX", -- The Discord invite code, do not include discord.gg/
+		  Invite = "BUA8XuPWGX", -- The Discord invite code, do not include discord.gg/
 		  RememberJoins = true -- Set this to false to make them join the discord every time they load it up
 	   },
 	   KeySystem = true, -- Set this to true to use our key system
@@ -28,7 +28,7 @@ if game.PlaceId == 11302865934 then
 		  FileName = "JKey",
 		  SaveKey = false,
 		  GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-		  Key = "RgUkXp2s",
+		  Key = "jWnZr4u7s",
 	   }
 	})
 	
@@ -80,6 +80,8 @@ if game.PlaceId == 11302865934 then
 	-- Auto Farm
 	
 	local Tab = Window:CreateTab("Auto Farm", 4483362458) -- Title, Image
+
+	local Section = Tab:CreateSection("Auto Wins")
 	
 	local Toggle = Tab:CreateToggle({
 	   Name = "Auto Wins",
@@ -92,6 +94,8 @@ if game.PlaceId == 11302865934 then
 	   end,
 	})
 	
+	local Section = Tab:CreateSection("Auto Rebirths")
+
 	local Toggle = Tab:CreateToggle({
 	   Name = "Auto Rebirths",
 	   CurrentValue = false,
@@ -105,7 +109,7 @@ if game.PlaceId == 11302865934 then
 	
 	-- Eggs
 	
-	local Tab = Window:CreateTab("Eggs", 4483362458) -- Title, Image
+	local Section = Tab:CreateSection("Auto Hatch Eggs")
 
 	local Paragraph = Tab:CreateParagraph({Title = "NOTE", Content = "You must be standing inside the egg box"})
 	
@@ -181,6 +185,8 @@ if game.PlaceId == 11302865934 then
 	local Paragraph = Tab:CreateParagraph({Title = "v1.5", Content = "Added a teleport section"})
 	
 	local Paragraph = Tab:CreateParagraph({Title = "v1.6", Content = "Switched to a different UI"})
+
+	local Paragraph = Tab:CreateParagraph({Title = "v1.7", Content = "Transferred auto hatch to auto farm"})
 	
 	-- GUI options
 	
