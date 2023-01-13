@@ -26,7 +26,7 @@ if game.PlaceId == 11302865934 then
 		  Subtitle = "J.#5424",
 		  Note = "https://pastebin.com/raw/DDib0F3d",
 		  FileName = "JKey",
-		  SaveKey = false,
+		  SaveKey = true,
 		  GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
 		  Key = "jWnZr4u7s",
 	   }
