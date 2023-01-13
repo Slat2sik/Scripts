@@ -28,7 +28,7 @@ if game.PlaceId == 11063612131 then
 		  FileName = "JKey",
 		  SaveKey = false,
 		  GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
-		  Key = "RgUkXp2s",
+		  Key = "jWnZr4u7s",
 	   }
 	})
 
