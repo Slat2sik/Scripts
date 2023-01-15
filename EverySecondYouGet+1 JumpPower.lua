@@ -249,6 +249,6 @@ if game.PlaceId == 11063612131 then
 
 
 
-
+	Rayfield:LoadConfiguration()
 end
-Rayfield:LoadConfiguration()
+

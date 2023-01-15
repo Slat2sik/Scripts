@@ -1,7 +1,7 @@
 --[[
-Created by J.
+Created by slat
 Contact me:
-Discord: J.#5424
+Discord: slat#5424
 ]]
 
 if game.PlaceId == 11302865934 then
@@ -9,7 +9,7 @@ if game.PlaceId == 11302865934 then
 	local Window = Rayfield:CreateWindow({
 	   Name = "Every Second You Get +1 Health",
 	   LoadingTitle = "Every Second You Get +1 Health",
-	   LoadingSubtitle = "by J.#5424",
+	   LoadingSubtitle = "by slat#5424",
 	--    ConfigurationSaving = {
 	--       Enabled = false,
 	--       FolderName = nil, -- Create a custom folder for your hub/game
@@ -23,7 +23,7 @@ if game.PlaceId == 11302865934 then
 	   KeySystem = true, -- Set this to true to use our key system
 	   KeySettings = {
 		  Title = "Key System",
-		  Subtitle = "J.#5424",
+		  Subtitle = "slat#5424",
 		  Note = "https://pastebin.com/raw/DDib0F3d",
 		  FileName = "JKey",
 		  SaveKey = true,
@@ -201,6 +201,5 @@ if game.PlaceId == 11302865934 then
 	
 	
 	
-	
-	end
 	Rayfield:LoadConfiguration()
+	end
