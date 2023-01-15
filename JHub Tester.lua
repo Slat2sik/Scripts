@@ -1,6 +1,4 @@
 --[[
-Created by slat
-Contact me:
 Discord: slat#5424
 ]]
 
